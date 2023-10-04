@@ -112,6 +112,7 @@ class SideTitlesWidget extends StatelessWidget {
     AxisSide side,
   ) {
     List<AxisSideTitleMetaData> axisPositions;
+    List<AxisSideTitleWidgetHolder> axisPositionsHolders = [];
     final interval = sideTitles.interval ??
         Utils().getEfficientInterval(
           axisViewSize,
@@ -149,26 +150,27 @@ class SideTitlesWidget extends StatelessWidget {
         return AxisSideTitleMetaData(axisValue, axisLocation);
       }).toList();
     }
-    return axisPositions.map(
-      (metaData) {
-        return AxisSideTitleWidgetHolder(
-          metaData,
-          sideTitles.getTitlesWidget(
-            metaData.axisValue,
-            TitleMeta(
-              min: axisMin,
-              max: axisMax,
-              appliedInterval: interval,
-              sideTitles: sideTitles,
-              formattedValue: Utils().formatNumber(metaData.axisValue),
-              axisSide: side,
-              parentAxisSize: axisViewSize,
-              axisPosition: metaData.axisPixelLocation,
-            ),
+    for (var i = 0; i < axisPositions.length; i++) {
+      final axisPositionHolder = AxisSideTitleWidgetHolder(
+        axisPositions[i],
+        sideTitles.getTitlesWidget(
+          axisPositions[i].axisValue,
+          TitleMeta(
+            min: axisMin,
+            max: axisMax,
+            appliedInterval: interval,
+            sideTitles: sideTitles,
+            formattedValue: Utils().formatNumber(axisPositions[i].axisValue),
+            axisSide: side,
+            parentAxisSize: axisViewSize,
+            axisPosition: axisPositions[i].axisPixelLocation,
           ),
-        );
-      },
-    ).toList();
+          i,
+        ),
+      );
+      axisPositionsHolders.add(axisPositionHolder);
+    }
+    return axisPositionsHolders;
   }
 
   @override

@@ -65,7 +65,7 @@ class _LineChartSample3State extends State<LineChartSample3> {
     super.initState();
   }
 
-  Widget leftTitleWidgets(double value, TitleMeta meta) {
+  Widget leftTitleWidgets(double value, TitleMeta meta, int index) {
     if (value % 1 != 0) {
       return Container();
     }
@@ -101,7 +101,7 @@ class _LineChartSample3State extends State<LineChartSample3> {
     );
   }
 
-  Widget bottomTitleWidgets(double value, TitleMeta meta) {
+  Widget bottomTitleWidgets(double value, TitleMeta meta, int index) {
     final isTouched = value == touchedValue;
     final style = TextStyle(
       color: isTouched ? widget.bottomTouchedTextColor : widget.bottomTextColor,

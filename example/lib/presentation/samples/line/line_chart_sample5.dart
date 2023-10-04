@@ -36,7 +36,8 @@ class _LineChartSample5State extends State<LineChartSample5> {
         FlSpot(6, 8),
       ];
 
-  Widget bottomTitleWidgets(double value, TitleMeta meta, double chartWidth) {
+  Widget bottomTitleWidgets(
+      double value, TitleMeta meta, double chartWidth, int index) {
     final style = TextStyle(
       fontWeight: FontWeight.bold,
       color: AppColors.contentColorPink,
@@ -211,12 +212,9 @@ class _LineChartSample5State extends State<LineChartSample5> {
                   sideTitles: SideTitles(
                     showTitles: true,
                     interval: 1,
-                    getTitlesWidget: (value, meta) {
+                    getTitlesWidget: (value, meta, index) {
                       return bottomTitleWidgets(
-                        value,
-                        meta,
-                        constraints.maxWidth,
-                      );
+                          value, meta, constraints.maxWidth, index);
                     },
                     reservedSize: 30,
                   ),

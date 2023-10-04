@@ -171,7 +171,7 @@ class BarChartSample2State extends State<BarChartSample2> {
     );
   }
 
-  Widget leftTitles(double value, TitleMeta meta) {
+  Widget leftTitles(double value, TitleMeta meta, int index) {
     const style = TextStyle(
       color: Color(0xff7589a2),
       fontWeight: FontWeight.bold,
@@ -194,7 +194,7 @@ class BarChartSample2State extends State<BarChartSample2> {
     );
   }
 
-  Widget bottomTitles(double value, TitleMeta meta) {
+  Widget bottomTitles(double value, TitleMeta meta, int index) {
     final titles = <String>['Mn', 'Te', 'Wd', 'Tu', 'Fr', 'St', 'Su'];
 
     final Widget text = Text(

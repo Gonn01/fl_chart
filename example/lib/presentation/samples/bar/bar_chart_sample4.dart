@@ -15,7 +15,7 @@ class BarChartSample4 extends StatefulWidget {
 }
 
 class BarChartSample4State extends State<BarChartSample4> {
-  Widget bottomTitles(double value, TitleMeta meta) {
+  Widget bottomTitles(double value, TitleMeta meta, int index) {
     const style = TextStyle(fontSize: 10);
     String text;
     switch (value.toInt()) {
@@ -44,7 +44,7 @@ class BarChartSample4State extends State<BarChartSample4> {
     );
   }
 
-  Widget leftTitles(double value, TitleMeta meta) {
+  Widget leftTitles(double value, TitleMeta meta, int index) {
     if (value == meta.max) {
       return Container();
     }

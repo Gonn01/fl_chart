@@ -71,7 +71,7 @@ class _LineChartSample8State extends State<LineChartSample8> {
     );
   }
 
-  Widget bottomTitleWidgets(double value, TitleMeta meta) {
+  Widget bottomTitleWidgets(double value, TitleMeta meta, int index) {
     const style = TextStyle(
       fontSize: 10,
       color: AppColors.mainTextColor1,
@@ -82,7 +82,7 @@ class _LineChartSample8State extends State<LineChartSample8> {
     );
   }
 
-  Widget leftTitleWidgets(double value, TitleMeta meta) {
+  Widget leftTitleWidgets(double value, TitleMeta meta, int index) {
     IconData icon;
     Color color;
     switch (value.toInt()) {

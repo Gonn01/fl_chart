@@ -29,7 +29,7 @@ void main() {
         axisNameWidget: const Text('Left Titles'),
         sideTitles: SideTitles(
           showTitles: true,
-          getTitlesWidget: (double value, TitleMeta meta) {
+          getTitlesWidget: (double value, TitleMeta meta, int index) {
             return Text('L-${value.toInt()}');
           },
           interval: 1,
@@ -39,7 +39,7 @@ void main() {
         axisNameWidget: const Text('Top Titles'),
         sideTitles: SideTitles(
           showTitles: true,
-          getTitlesWidget: (double value, TitleMeta meta) {
+          getTitlesWidget: (double value, TitleMeta meta, int index) {
             return Text('T-${value.toInt()}');
           },
           interval: 1,
@@ -49,7 +49,7 @@ void main() {
         axisNameWidget: const Text('Right Titles'),
         sideTitles: SideTitles(
           showTitles: true,
-          getTitlesWidget: (double value, TitleMeta meta) {
+          getTitlesWidget: (double value, TitleMeta meta, int index) {
             return Text('R-${value.toInt()}');
           },
           interval: 1,
@@ -59,7 +59,7 @@ void main() {
         axisNameWidget: const Text('Bottom Titles'),
         sideTitles: SideTitles(
           showTitles: true,
-          getTitlesWidget: (double value, TitleMeta meta) {
+          getTitlesWidget: (double value, TitleMeta meta, int index) {
             return Text('B-${value.toInt()}');
           },
           interval: 1,
@@ -74,7 +74,7 @@ void main() {
         axisNameWidget: const Text('Left Titles'),
         sideTitles: SideTitles(
           showTitles: true,
-          getTitlesWidget: (double value, TitleMeta meta) {
+          getTitlesWidget: (double value, TitleMeta meta, int index) {
             return Text('L-${value.toInt()}');
           },
           interval: 1,
@@ -92,7 +92,7 @@ void main() {
       leftTitles: AxisTitles(
         sideTitles: SideTitles(
           showTitles: true,
-          getTitlesWidget: (double value, TitleMeta meta) {
+          getTitlesWidget: (double value, TitleMeta meta, int index) {
             return Text('L-${value.toInt()}');
           },
           interval: 1,
@@ -133,7 +133,7 @@ void main() {
         axisNameWidget: const Icon(Icons.check),
         sideTitles: SideTitles(
           showTitles: true,
-          getTitlesWidget: (value, meta) {
+          getTitlesWidget: (value, meta, _) {
             return TextButton(
               onPressed: () {},
               child: Text(
@@ -175,7 +175,7 @@ void main() {
         sideTitles: SideTitles(
           showTitles: true,
           interval: 1,
-          getTitlesWidget: (value, meta) {
+          getTitlesWidget: (value, meta, _) {
             return TextButton(
               onPressed: () {},
               child: Text(
@@ -199,7 +199,7 @@ void main() {
         sideTitles: SideTitles(
           showTitles: true,
           interval: 1,
-          getTitlesWidget: (value, meta) {
+          getTitlesWidget: (value, meta, _) {
             return TextButton(
               onPressed: () {},
               child: Text(

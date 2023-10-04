@@ -17,7 +17,7 @@ class LineChartSample7 extends StatelessWidget {
   final Color line2Color;
   final Color betweenColor;
 
-  Widget bottomTitleWidgets(double value, TitleMeta meta) {
+  Widget bottomTitleWidgets(double value, TitleMeta meta, int index) {
     const style = TextStyle(
       fontSize: 10,
       fontWeight: FontWeight.bold,
@@ -71,7 +71,7 @@ class LineChartSample7 extends StatelessWidget {
     );
   }
 
-  Widget leftTitleWidgets(double value, TitleMeta meta) {
+  Widget leftTitleWidgets(double value, TitleMeta meta, int index) {
     const style = TextStyle(fontSize: 10);
 
     return SideTitleWidget(

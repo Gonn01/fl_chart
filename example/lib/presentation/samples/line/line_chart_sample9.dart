@@ -97,7 +97,7 @@ class LineChartSample9 extends StatelessWidget {
                   leftTitles: AxisTitles(
                     sideTitles: SideTitles(
                       showTitles: true,
-                      getTitlesWidget: (value, meta) =>
+                      getTitlesWidget: (value, meta, _) =>
                           leftTitleWidgets(value, meta, constraints.maxWidth),
                       reservedSize: 56,
                     ),
@@ -109,7 +109,7 @@ class LineChartSample9 extends StatelessWidget {
                   bottomTitles: AxisTitles(
                     sideTitles: SideTitles(
                       showTitles: true,
-                      getTitlesWidget: (value, meta) =>
+                      getTitlesWidget: (value, meta, _) =>
                           bottomTitleWidgets(value, meta, constraints.maxWidth),
                       reservedSize: 36,
                       interval: 1,

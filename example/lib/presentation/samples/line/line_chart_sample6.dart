@@ -63,7 +63,7 @@ class LineChartSample6 extends StatelessWidget {
   late double minSpotY;
   late double maxSpotY;
 
-  Widget leftTitleWidgets(double value, TitleMeta meta) {
+  Widget leftTitleWidgets(double value, TitleMeta meta, int index) {
     final style = TextStyle(
       color: line1Color1,
       fontWeight: FontWeight.bold,
@@ -86,7 +86,7 @@ class LineChartSample6 extends StatelessWidget {
     );
   }
 
-  Widget rightTitleWidgets(double value, TitleMeta meta) {
+  Widget rightTitleWidgets(double value, TitleMeta meta, int index) {
     final style = TextStyle(
       color: line2Color2,
       fontWeight: FontWeight.bold,
@@ -101,7 +101,7 @@ class LineChartSample6 extends StatelessWidget {
     return Text(intValue.toString(), style: style, textAlign: TextAlign.right);
   }
 
-  Widget topTitleWidgets(double value, TitleMeta meta) {
+  Widget topTitleWidgets(double value, TitleMeta meta, int index) {
     if (value % 1 != 0) {
       return Container();
     }

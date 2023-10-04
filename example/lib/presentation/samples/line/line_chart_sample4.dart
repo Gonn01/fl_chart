@@ -19,7 +19,7 @@ class LineChartSample4 extends StatelessWidget {
   final Color belowLineColor;
   final Color aboveLineColor;
 
-  Widget bottomTitleWidgets(double value, TitleMeta meta) {
+  Widget bottomTitleWidgets(double value, TitleMeta meta, int index) {
     String text;
     switch (value.toInt()) {
       case 0:
@@ -76,7 +76,7 @@ class LineChartSample4 extends StatelessWidget {
     );
   }
 
-  Widget leftTitleWidgets(double value, TitleMeta meta) {
+  Widget leftTitleWidgets(double value, TitleMeta meta, int index) {
     const style = TextStyle(
       color: AppColors.mainTextColor3,
       fontSize: 12,

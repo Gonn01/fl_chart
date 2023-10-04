@@ -43,7 +43,7 @@ class BarChartSample6 extends StatelessWidget {
     );
   }
 
-  Widget bottomTitles(double value, TitleMeta meta) {
+  Widget bottomTitles(double value, TitleMeta meta, int index) {
     const style = TextStyle(fontSize: 10);
     String text;
     switch (value.toInt()) {

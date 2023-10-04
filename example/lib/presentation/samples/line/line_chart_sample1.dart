@@ -92,7 +92,7 @@ class _LineChart extends StatelessWidget {
         lineChartBarData2_3,
       ];
 
-  Widget leftTitleWidgets(double value, TitleMeta meta) {
+  Widget leftTitleWidgets(double value, TitleMeta meta, int index) {
     const style = TextStyle(
       fontWeight: FontWeight.bold,
       fontSize: 14,
@@ -128,7 +128,7 @@ class _LineChart extends StatelessWidget {
         reservedSize: 40,
       );
 
-  Widget bottomTitleWidgets(double value, TitleMeta meta) {
+  Widget bottomTitleWidgets(double value, TitleMeta meta, int index) {
     const style = TextStyle(
       fontWeight: FontWeight.bold,
       fontSize: 16,

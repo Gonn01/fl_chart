@@ -57,7 +57,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
     );
   }
 
-  Widget bottomTitleWidgets(double value, TitleMeta meta) {
+  Widget bottomTitleWidgets(double value, TitleMeta meta, int index) {
     const style = TextStyle(
       fontWeight: FontWeight.bold,
       fontSize: 16,
@@ -84,7 +84,7 @@ class _LineChartSample2State extends State<LineChartSample2> {
     );
   }
 
-  Widget leftTitleWidgets(double value, TitleMeta meta) {
+  Widget leftTitleWidgets(double value, TitleMeta meta, int index) {
     const style = TextStyle(
       fontWeight: FontWeight.bold,
       fontSize: 15,
